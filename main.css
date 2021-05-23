@@ -23,7 +23,7 @@ html {
   --text: calc(1.2rem + 1vw);
   --big: calc(2.4rem + 1vw);
   --special-color: #906272;
-  --background-color: #414141;
+  --background-color: #53585a;
   --gray-text: #525252;
 }
 .flex {
@@ -34,6 +34,7 @@ html {
 }
 body {
   font-family: "Ruhl", sans-serif;
+  animation: opening 1s ease-in-out;
 }
 
 a {
@@ -84,7 +85,7 @@ nav {
 }
 .nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex: 1 1 30rem;
 }
 .logo {
@@ -105,19 +106,19 @@ nav {
   flex: 3 1 40rem;
   text-align: center;
 }
-.hero-introduction p{
-    padding: 5rem 10rem ;
+.hero-introduction p {
+  padding: 5rem 10rem;
+  color: var(--gray-text);
 }
-.hero-introduction h2{
-    padding: 5rem 10rem ;
+.hero-introduction h2 {
+  padding: 5rem 10rem;
 }
-.hero-introduction a{
-    padding: 2rem 8rem ;
-    border: 3px solid ;
+.hero-introduction a {
+  padding: 2rem 8rem;
+  border: 3px solid;
 }
 .hero-images {
   flex: 1 1 40rem;
-  
 }
 .hero-images img {
   border-radius: 100%;
@@ -127,4 +128,91 @@ nav {
   filter: grayscale(100%);
   pointer-events: none;
   margin-top: 10rem;
+  animation: images 1s ease-in;
+}
+
+/* Animations */
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes images {
+  from {
+    transform: translateY(10%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1012px) {
+ .hero{
+     width: 100%;
+ }
+ /* Burger */
+    .burger span {
+    padding: 0.2rem 2rem;
+    background: var(--gray-text);
+    display: block;
+    margin: 0.5rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  .nav-links {
+    background: var(--background-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transition: transform 1s ease;
+    opacity: 0.9;
+    
+    
+  }
+  .nav-links a {
+    color: white;
+    font-size: var(--header3);
+  }
+
+  .nav-open {
+    transform: translateX(-100%);
+  }
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background-color: white;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background-color: white;
+  }
+  h2 {
+    font-size: var(--header2);
+  }
+  .hero-introduction h2 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
 }
