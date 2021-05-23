@@ -168,7 +168,7 @@ nav {
   left: 50%;
   transform: translate(-50%);
   font-size: var(--header2);
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   font-family: "vibes";
   
 }
@@ -179,6 +179,46 @@ nav {
   object-fit: cover;
   background-position: center;
 }
+/* Gallery Grid */
+
+.gallery{
+    display: grid;
+    min-height: 10vh;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+}
+.gallery img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.gallery1{
+    grid-column: 1/3;
+}
+
+.gallery2{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.gallery-head {
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: white;
+    padding: 10rem 1rem;
+    text-align: center;
+    background-color: var(--background-color);
+    opacity: 0.5;
+}
+
+
+
+
+
 
 /* Animations */
 
@@ -262,4 +302,17 @@ nav {
   .hero-introduction p {
     padding: 5rem 3rem;
   }
+
+  /* Gallery */
+.gallery{
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+}
+  .gallery img{
+      grid-row: auto;
+      grid-column: auto;
+  }
+  .gallery-head{
+      padding: 1rem 2rem;
+  }
+
 }
