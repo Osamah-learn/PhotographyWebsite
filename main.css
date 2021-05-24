@@ -258,7 +258,7 @@ li a:hover {
   background-color: var(--background-color);
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 ::placeholder {
   color: rgb(251, 247, 247);
@@ -271,6 +271,7 @@ li a:hover {
   color: white;
   border: none;
   width: 100%;
+  cursor: pointer;
 }
 
 /* Footer Section */
