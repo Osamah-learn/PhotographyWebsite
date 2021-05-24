@@ -168,7 +168,7 @@ nav {
   left: 50%;
   transform: translate(-50%);
   font-size: var(--header2);
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   font-family: "vibes";
   
 }
