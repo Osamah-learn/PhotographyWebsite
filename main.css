@@ -26,6 +26,8 @@ html {
   --special-color: #906272;
   --background-color: #53585a;
   --gray-text: #525252;
+   scroll-behavior: smooth;
+
 }
 .flex {
   display: flex;
