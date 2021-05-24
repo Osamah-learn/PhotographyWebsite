@@ -326,6 +326,9 @@ li a:hover {
     margin-top: 3rem;
   }
   /* Burger */
+  .burger {
+    cursor: pointer;
+}
   .burger span {
     padding: 0.2rem 2rem;
     background: var(--gray-text);
