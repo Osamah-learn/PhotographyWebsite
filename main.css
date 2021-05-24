@@ -212,7 +212,7 @@ li a:hover {
 }
 
 .gallery-head {
-  top: 50%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -317,8 +317,12 @@ li a:hover {
 /* Media Queries */
 
 @media only screen and (max-width: 1012px) {
+ 
   .hero {
     width: 100%;
+  }
+  .hero h2{
+    margin-top: 3rem;
   }
   /* Burger */
   .burger span {
@@ -393,6 +397,24 @@ li a:hover {
   }
   .footer h4 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    order: 1;
+  }
+}
+
+
+@media screen and (min-width:1700px) {
+  html {
+    
+    /* The larger the screen get the more our font bigger get  */
+    --header1: calc(2rem + 1vw);
+    --header2: calc(3.5rem + 1vw);
+    --header3: calc(3rem + 1vw);
+    --header4: calc(2.4rem + 1vw);
+    --text: calc(1rem + 1vw);
+    --big: calc(8rem + 1vw);
+    --special-color: #906272;
+    --background-color: #53585a;
+    --gray-text: #525252;
   }
 }
